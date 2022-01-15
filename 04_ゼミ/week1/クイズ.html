@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WebExpertコーステンプレート</title>
+  </head>
+  <body>
+    <div>トルコの首都はどこでしょうか？</div>
+    <button id="button-1">アンカラ</button>
+    <button id="button-2">カッパドキア</button>
+    <button id="button-3">イスタンブール</button>
+    <div>BBT 2年 まっつー</div>
+    <div>同志社女子大 3年 なっこ</div>
+
+    <script>
+      // ここにJavaScriptをかく！
+      // const 変数名 = document.getElementById("id名"
+      const button1 = document.getElementById("button-1")
+
+      const alertMessage1 = function () {
+        alert("正解!!")
+      }
+
+      button1.onclick = alertMessage1
+
+      const button2 = document.getElementById("button-2")
+
+      const alertMessage2 = function () {
+        alert("遺跡で有名！！")
+      }
+
+      button2.onclick = alertMessage2
+
+      const button3 = document.getElementById("button-3")
+      const alertMessage3 = function () {
+        alert("残念")
+      }
+      button3.onclick = alertMessage3
+    </script>
+  </body>
+</html>
