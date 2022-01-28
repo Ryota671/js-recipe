@@ -2,6 +2,6 @@
 
 ```bash
 git add .
-git commit -m "コミット"
+git commit -m "自販機アプリを作りました"
 git push origin master
 ```
