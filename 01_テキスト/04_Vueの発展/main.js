@@ -14,9 +14,7 @@ const vIf = {
   },
 }
 
-Vue.createApp(vIf).mount("#v-if")
-
-const vIfSignIn = {
+Vue.createApp({
   data() {
     return {
       user: null,
@@ -32,21 +30,17 @@ const vIfSignIn = {
       this.user = null
     },
   },
-}
+}).mount("#v-if-sign-in")
 
-Vue.createApp(vIfSignIn).mount("#v-if-sign-in")
-
-const vFor = {
+Vue.createApp({
   data() {
     return {
       animals: ["ふらみんご", "ごりら", "らいおん"],
     }
   },
-}
+}).mount("#v-for")
 
-Vue.createApp(vFor).mount("#v-for")
-
-const vForPush = {
+Vue.createApp({
   data() {
     return {
       animals: ["ふらみんご", "ごりら", "らいおん"],
@@ -57,9 +51,7 @@ const vForPush = {
       this.animals.push("んらいおん")
     },
   },
-}
-
-Vue.createApp(vForPush).mount("#v-for-push")
+}).mount("#v-for-push")
 
 const vBind = {
   data() {
@@ -69,9 +61,15 @@ const vBind = {
   },
 }
 
-Vue.createApp(vBind).mount("#v-bind")
+Vue.createApp({
+  data() {
+    return {
+      helloClass: "hello",
+    }
+  },
+}).mount("#v-bind")
 
-const computed = {
+Vue.createApp({
   data() {
     return {
       items: [
@@ -102,11 +100,9 @@ const computed = {
       return price
     },
   },
-}
+}).mount("#computed")
 
-Vue.createApp(computed).mount("#computed")
-
-const computedRecalculate = {
+Vue.createApp({
   data() {
     return {
       items: [
@@ -142,21 +138,17 @@ const computedRecalculate = {
       item.amount += 1
     },
   },
-}
+}).mount("#computed-recalculate")
 
-Vue.createApp(computedRecalculate).mount("#computed-recalculate")
-
-const vModel = {
+Vue.createApp({
   data() {
     return {
       inputValue: "",
     }
   },
-}
+}).mount("#v-model")
 
-Vue.createApp(vModel).mount("#v-model")
-
-const created = {
+Vue.createApp({
   data() {
     return {
       inputValue: "",
@@ -174,6 +166,4 @@ const created = {
       localStorage.memo = this.inputValue
     },
   },
-}
-
-Vue.createApp(created).mount("#created")
+}).mount("#created")

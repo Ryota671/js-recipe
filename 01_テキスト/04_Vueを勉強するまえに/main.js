@@ -22,9 +22,12 @@ button.onclick = function () {
   localStorage.list = JSON.stringify(list)
 
   // データを表示するコード
-  const card = document.createElement("div")
-  card.textContent = text
-  container.appendChild(card)
+  container.textContent = ""
+  for (const text of list) {
+    const card = document.createElement("div")
+    card.textContent = text
+    container.appendChild(card)
+  }
 }
 
 /**

@@ -60,7 +60,7 @@
           {{ item.price }} 円の {{ item.name }} が {{ item.amount }}
           個あります。
         </span>
-        <button v-on:click="addItem(item)">＋１個</button>
+        <button v-on:click="addItem(item.name)">＋１個</button>
       </div>
       <div>全部で{{ totalPrice }}円です。</div>
     </section>
