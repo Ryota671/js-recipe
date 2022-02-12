@@ -9,12 +9,11 @@ const Palette = {
     }
   },
   methods: {
-    // マウスの位置に応じて色を変える
     changeColor(e) {
       this.red = e.offsetX
       this.green = e.offsetY
     },
-    // 色を選んでミニパレットに追加する
+
     pickColor() {
       const newColor = {
         red: this.red,
@@ -22,7 +21,7 @@ const Palette = {
       }
       this.colors.push(newColor)
     },
-    // パレットに指定した色を表示する
+
     showColor(color) {
       this.red = color.red
       this.green = color.green
